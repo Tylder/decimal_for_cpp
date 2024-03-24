@@ -695,37 +695,37 @@ public:
     decimal() noexcept : m_value(0) {}
     decimal(const decimal &src) = default;
 #endif
-    explicit decimal(uint value) {
+    decimal(uint value) {
         init(value);
     }
-    explicit decimal(int value) {
+    decimal(int value) {
         init(value);
     }
 #ifdef DEC_HANDLE_LONG
-    explicit decimal(long int value) {
+    decimal(long int value) {
         init(value);
     }
 #endif
-    explicit decimal(int64 value) {
+    decimal(int64 value) {
         init(value);
     }
-    explicit decimal(xdouble value) {
+    decimal(xdouble value) {
         init(value);
     }
-    explicit decimal(double value) {
+    decimal(double value) {
         init(value);
     }
-    explicit decimal(float value) {
+    decimal(float value) {
         init(value);
     }
-    explicit decimal(int64 value, int64 precFactor) {
+    decimal(int64 value, int64 precFactor) {
         initWithPrec(value, precFactor);
     }
-    explicit decimal(const std::string &value) {
+    decimal(const std::string &value) {
         fromString(value, *this);
     }
 
-    explicit decimal(const std::string &value, const basic_decimal_format &format) {
+    decimal(const std::string &value, const basic_decimal_format &format) {
         fromString(value, format, *this);
     }
 
